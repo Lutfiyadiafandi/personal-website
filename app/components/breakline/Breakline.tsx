@@ -1,15 +1,10 @@
 import React from "react";
 type BreaklineProps = {
   className?: string;
-  [propName: string]: string | undefined;
 };
-const Breakline = ({ className, ...others }: BreaklineProps) => {
+const Breakline = ({ className }: BreaklineProps) => {
   return (
-    <div
-      className={`border-t-2 ${className}`}
-      data-testid="breakline"
-      {...others}
-    ></div>
+    <div className={`border-t-2 ${className}`} data-testid="breakline"></div>
   );
 };
 

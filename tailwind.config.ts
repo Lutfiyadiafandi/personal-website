@@ -36,8 +36,9 @@ const config: Config = {
       fontSize: {
         heading: ["60px", { lineHeight: "54px" }],
         heading2: ["54px", { lineHeight: "50px" }],
-        large: ["36px", { lineHeight: "34px" }],
         headingnum: ["49px", { lineHeight: "49px" }],
+        large: ["36px", { lineHeight: "34px" }],
+        large2: ["24px", { lineHeight: "26px" }],
         medium: ["20px", { lineHeight: "18px" }],
         medium2: ["18px", { lineHeight: "24px" }],
         desc: ["18px", { lineHeight: "22px" }],
