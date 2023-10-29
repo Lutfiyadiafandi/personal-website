@@ -6,7 +6,7 @@ type BreaklineProps = {
 const Breakline = ({ className, ...others }: BreaklineProps) => {
   return (
     <div
-      className={`border-t my-2 ${className}`}
+      className={`border-t-2 ${className}`}
       data-testid="breakline"
       {...others}
     ></div>

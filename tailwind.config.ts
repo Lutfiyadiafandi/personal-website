@@ -24,6 +24,9 @@ const config: Config = {
       // => @media (min-width: 1536px) { ... }
     },
     extend: {
+      fontFamily: {
+        plusjakarta: ["var(--font-plus-jakarta)"],
+      },
       gridAutoRows: {
         cards: "minmax(300px, 300px)",
       },
@@ -31,10 +34,15 @@ const config: Config = {
         "4xl": "35px",
       },
       fontSize: {
-        large: ["60px", { lineHeight: "54px" }],
-        medium: "45px",
-        small: ["22px", { lineHeight: "18px" }],
-        small2: ["20px", { lineHeight: "18px" }],
+        heading: ["60px", { lineHeight: "54px" }],
+        heading2: ["54px", { lineHeight: "50px" }],
+        large: ["36px", { lineHeight: "34px" }],
+        headingnum: ["49px", { lineHeight: "49px" }],
+        medium: ["20px", { lineHeight: "18px" }],
+        medium2: ["18px", { lineHeight: "24px" }],
+        desc: ["18px", { lineHeight: "22px" }],
+        small: ["16px", { lineHeight: "22px" }],
+        subheading: ["14px", { lineHeight: "13px" }],
       },
     },
   },

@@ -16,7 +16,7 @@ const TextTransitions = ({ texts }: TextTransitionsProps) => {
   }, []);
   return (
     <TextTransition springConfig={presets.wobbly}>
-      <h1 className="text-small font-semibold text-white">
+      <h1 className="text-medium font-semibold text-white">
         {texts[index % texts.length]}
       </h1>
     </TextTransition>

@@ -29,10 +29,10 @@ export default function Dropdown() {
       className="relative w-full h-full px-[25px] py-[6px] bg-yellow-30 rounded-full cursor-pointer border border-white bg-[#ffffff26] group hover:bg-white duration-500 ease-in-out"
     >
       <div className="flex justify-between items-center">
-        <span className="text-white text-small2 font-semibold group-hover:text-black  duration-500 ease-in-out">
-          Navigation Menu
+        <span className="text-white text-medium font-semibold group-hover:text-black  duration-500 ease-in-out">
+          Navigation menu
         </span>
-        <ArrowIcons />
+        <ArrowIcons color="white" colorhover="black" />
       </div>
 
       {isOpen && (

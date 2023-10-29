@@ -1,5 +1,5 @@
 import React from "react";
-import TextTransitions from "../../components/texttransition/TextTransitions";
+import TextTransitions from "../../../components/texttransition/TextTransitions";
 
 const Hero = () => {
   return (
