@@ -1,5 +1,5 @@
 import React from "react";
-import TextTransitions from "../../../components/texttransition/TextTransitions";
+import TextTransitions from "@/common/components/elements/TextTransitions";
 
 const Hero = () => {
   return (
@@ -8,7 +8,7 @@ const Hero = () => {
         <div className="h-full px-[25px] rounded-full border border-white bg-[#ffffff80] backdrop-blur-xl flex justify-center items-center">
           <TextTransitions
             texts={[
-              "Front End Developer",
+              "Fronted Developer",
               "Full Stack Developer",
               "Web Developer",
             ]}

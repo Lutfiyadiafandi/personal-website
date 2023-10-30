@@ -8,7 +8,7 @@ body {
 }
 
 .hero {
-  background-image: url("assets/images/Hero.avif");
+  background-image: url("../common/assets/images/Hero.avif");
   background-position: center;
   background-size: cover;
 }

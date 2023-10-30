@@ -1,6 +1,6 @@
 import React from "react";
-import ArrowIcons from "../arrowicons/ArrowIcons";
-import Breakline from "../breakline/Breakline";
+import ArrowIcons from "@/common/components/elements/ArrowIcons";
+import Breakline from "@/common/components/elements/Breakline";
 
 type BoxProps = {
   children: React.ReactNode;

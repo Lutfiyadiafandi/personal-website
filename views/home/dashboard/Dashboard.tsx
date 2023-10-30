@@ -1,6 +1,6 @@
 import React from "react";
-import Breakline from "@/app/components/breakline/Breakline";
-import DarkMode from "@/app/components/darkmode/DarkMode";
+import Breakline from "@/common/components/elements/Breakline";
+import DarkMode from "@/common/components/elements/darkmode/DarkMode";
 
 const Dashboard = () => {
   return (

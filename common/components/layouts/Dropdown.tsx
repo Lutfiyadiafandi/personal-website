@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
-import ArrowIcons from "../arrowicons/ArrowIcons";
+import ArrowIcons from "@/common/components/elements/ArrowIcons";
 import { usePathname } from "next/navigation";
 
 const links = [
@@ -12,6 +12,10 @@ const links = [
   {
     name: "Projects page",
     path: "/projects",
+  },
+  {
+    name: "Blogs page",
+    path: "/blogs",
   },
   {
     name: "Contact page",

@@ -1,8 +1,8 @@
 import Link from "next/link";
 import React from "react";
-import Logo from "@/app/assets/images/LogoLABlck.png";
+import Logo from "@/common/assets/images/LogoLABlck.png";
 import Image from "next/image";
-import Dropdown from "../dropdown/Dropdown";
+import Dropdown from "./Dropdown";
 
 const Navigation = () => {
   return (

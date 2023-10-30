@@ -1,8 +1,8 @@
 import React from "react";
-import Bullets from "@/app/components/bullets/Bullets";
-import Button from "@/app/components/button/Button";
-import Box from "@/app/components/box/Box";
-import Socmed from "@/app/components/socmed/Socmed";
+import Bullets from "@/common/components/elements/Bullets";
+import Button from "@/common/components/elements/Button";
+import Box from "@/common/components/layouts/Box";
+import Socmed from "@/common/components/elements/Socmed";
 import {
   FaInstagram,
   FaLinkedinIn,

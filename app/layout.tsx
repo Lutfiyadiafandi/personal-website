@@ -1,7 +1,8 @@
-import "./globals.css";
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans } from "@next/font/google";
-import Navigation from "./components/navigation/Navigation";
+import Navigation from "../common/components/layouts/Navigation";
+
+import "./globals.css";
 
 const plusJakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
