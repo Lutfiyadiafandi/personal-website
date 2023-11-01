@@ -8,33 +8,55 @@ import {
   FaLinkedinIn,
   FaGithub,
   FaWhatsapp,
+  FaDownload,
 } from "react-icons/fa";
+import Breakline from "@/common/components/elements/Breakline";
+import TextTransitions from "@/common/components/elements/TextTransitions";
+import Link from "next/link";
 
 const Profile = () => {
   return (
     <div className="col-span-2 row-span-2 lg:col-span-2 lg:row-span-2 rounded-4xl bg-white order-3">
       <div className="relative h-full p-6">
         <Bullets />
-        <div className="w-full h-full mx-auto bg-emerald-30 flex flex-col justify-evenly">
-          <div className="flex gap-10">
-            <div className="w-1/3 h-[300px] bg-indigo-400 rounded-tl-[5rem] rounded-tr-[5rem]"></div>
-            <div className="w-2/3 flex flex-col gap-5 justify-center">
-              <h1 className="text-heading text-black font-semibold">
-                Hey There!
-                <br />
-                <span className="text-large">
-                  I’m Lutfiyadi{" "}
-                  <span className="text-indigo-400 underline">Afandi</span>
+        <div className="w-full h-full mx-auto flex flex-col justify-evenly">
+          <div className="w-full flex flex-col gap-5 justify-center">
+            <p className="text-indigo-400 text-desc font-semibold">
+              Hey There!
+            </p>
+            <h1 className="text-heading text-black font-semibold">
+              I’m Lutfiyadi <span className="text-indigo-400">Afandi</span>
+            </h1>
+            <Breakline className="border-inherit border-t-4 rounded-lg" />
+            <div className="flex justify-between items-center">
+              <h2 className="text-medium text-black">
+                I’m a{" "}
+                <span className="inline-block">
+                  <TextTransitions
+                    texts={[
+                      "Fronted Developer",
+                      "Full Stack Developer",
+                      "Web Developer",
+                    ]}
+                  />
                 </span>
-              </h1>
-              <p className="text-gray-600 text-desc font-medium">
-                a wizard of code, a maestro of the digital canvas. Welcome to my
-                web sanctuary, where lines of code dance to create seamless
-                online experiences.
-              </p>
-              <Button text="Download CV" />
+              </h2>
+
+              <Link href={""} className="flex items-center gap-[5px] group">
+                <span className="text-medium2 text-gray-500 group-hover:text-black">
+                  Download CV
+                </span>
+                <FaDownload className="text-gray-500" />
+              </Link>
             </div>
+
+            <p className="text-gray-500 text-desc font-medium">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Recusandae, sapiente tempore cumque assumenda commodi quod atque
+              ex dolores vel nemo officiis? Consequatur magnam quaerat illo.
+            </p>
           </div>
+
           <div className="flex gap-1">
             <Box title="Let’s Connect ">
               <div className="w-full h-full flex gap-5 justify-center">

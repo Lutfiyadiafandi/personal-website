@@ -67,6 +67,10 @@ export const SkillStacks: SkillStacksProps[] = [
     name: "Node JS",
     icon: <FaNodeJs size={iconSize} className="text-green-600" />,
   },
+  {
+    name: "GitHub",
+    icon: <FaGithub size={iconSize} />,
+  },
 ];
 {
   //   HTML: <SiHtml5 size={iconSize} className="text-orange-500" />,
