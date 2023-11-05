@@ -1,10 +1,17 @@
+"use client";
 import React from "react";
 import "./DarkMode.css";
+import { useTheme } from "next-themes";
 
 const DarkMode = () => {
+  const { theme, setTheme } = useTheme();
   return (
     <label className="theme-switch">
-      <input type="checkbox" className="theme-switch__checkbox" />
+      <input
+        type="checkbox"
+        className="theme-switch__checkbox"
+        onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+      />
       <div className="theme-switch__container">
         <div className="theme-switch__clouds"></div>
         <div className="theme-switch__stars-container">

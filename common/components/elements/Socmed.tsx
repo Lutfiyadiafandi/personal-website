@@ -12,7 +12,7 @@ const Socmed = ({ image, link }: SocmedProps) => {
       href={link}
       passHref={true}
       target="_blank"
-      className="w-[45px] h-[45px] border border-gray-400 rounded-xl flex justify-center items-center hover:bg-white hover:text-black duration-500 ease-in-out transition-all"
+      className="w-[45px] h-[45px] border text-day border-gray-400 rounded-xl flex justify-center items-center hover:bg-primary-200 hover:text-day duration-500 ease-in-out transition-all dark:text-night dark:hover:text-night"
     >
       {image}
     </Link>

@@ -4,8 +4,9 @@ import TextTransition, { presets } from "react-text-transition";
 
 type TextTransitionsProps = {
   texts: [...string[]];
+  className: string;
 };
-const TextTransitions = ({ texts }: TextTransitionsProps) => {
+const TextTransitions = ({ texts, className }: TextTransitionsProps) => {
   const [index, setIndex] = useState(0);
   useEffect(() => {
     const intervalId = setInterval(
@@ -16,9 +17,7 @@ const TextTransitions = ({ texts }: TextTransitionsProps) => {
   }, []);
   return (
     <TextTransition springConfig={presets.wobbly}>
-      <h1 className="text-medium font-semibold text-black">
-        {texts[index % texts.length]}
-      </h1>
+      <h1 className={`${className}`}>{texts[index % texts.length]}</h1>
     </TextTransition>
   );
 };

@@ -8,16 +8,20 @@ type BoxProps = {
 };
 const Box = ({ children, title }: BoxProps) => {
   return (
-    <div className="w-1/2 h-[150px] flex flex-col justify-between border-2 border-black rounded-[25px] p-5 group hover:bg-black duration-500 ease-in-out transition-all">
-      <div className="group-hover:text-white">{children}</div>
+    <div className="group flex h-[150px] w-full flex-col justify-between rounded-[25px] border-2 border-day p-5 transition-all duration-500 ease-in-out md:w-1/2 dark:border-night">
+      <div className="">{children}</div>
       <div className="flex flex-col">
         <span className="flex justify-between">
-          <h1 className="text-medium2 text-black font-bold group-hover:text-white">
+          <h1 className="text-type-m font-bold text-day md:text-type-l dark:text-night">
             {title}
           </h1>
-          <ArrowIcons color="black" colorhover="white" />
+          <ArrowIcons
+            color="day"
+            colorhover="day"
+            darkmode="dark:text-night dark:group-hover:text-night"
+          />
         </span>
-        <Breakline className="border-black mt-1 group-hover:border-white" />
+        <Breakline className="mt-1 border-day group-hover:border-night dark:border-night dark:group-hover:border-day" />
       </div>
     </div>
   );

@@ -1,19 +1,15 @@
-import React from "react";
-import Breakline from "@/common/components/elements/Breakline";
-import DarkMode from "@/common/components/elements/darkmode/DarkMode";
+import Clock from "@/common/components/elements/Clock";
 
 const Dashboard = () => {
   return (
-    <div className="col-span-2 row-span-1 lg:col-span-2 lg:row-span-1 rounded-4xl order-1 lg:order-2">
-      <div className="h-full flex flex-col justify-end p-6">
-        <p className="text-white text-small font-semibold">Welcome</p>
-        <Breakline className="border-white border-dotted my-2" />
-        <div className="flex justify-between items-end">
-          <h1 className="text-heading text-white font-semibold mt-20">
-            Dashboard
-          </h1>
-          <DarkMode />
+    <div className="order-1 col-span-2 row-span-1 rounded-4xl p-6 lg:order-2 lg:col-span-2">
+      <div className="flex h-full flex-col justify-between gap-5 pt-[50px]">
+        <div className="flex flex-col lg:gap-3">
+          <Clock />
         </div>
+        <p className="text-center text-type-xl font-semibold text-night md:text-heading-s dark:text-day">
+          “Where your focus goes, your energy flows.”
+        </p>
       </div>
     </div>
   );

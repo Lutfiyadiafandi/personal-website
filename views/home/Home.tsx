@@ -3,18 +3,18 @@ import Hero from "./hero/Hero";
 import Dashboard from "./dashboard/Dashboard";
 import Profile from "./profile/Profile";
 import Projects from "./project/Project";
-import Skills from "./blogs/Blogs";
-import Blogs from "./skills/Skills";
+import Blogs from "./blogs/Blogs";
+import Skills from "./skills/Skills";
 
 const Home = () => {
   return (
-    <main className="max-w-screen-2xl mx-auto px-2 py-2 grid grid-cols-2 lg:grid-cols-4 auto-rows-cards gap-[10px]">
+    <main className="mx-auto grid max-w-screen-2xl auto-rows-min grid-cols-2 gap-[10px] px-2 py-2 lg:auto-rows-cards lg:grid-cols-4">
       <Hero />
       <Dashboard />
       <Profile />
       <Projects />
-      <Skills />
       <Blogs />
+      <Skills />
     </main>
   );
 };

@@ -2,11 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  box-sizing: border-box;
-  background-color: #333333;
-}
-
 .hero {
   background-image: url("../common/assets/images/Hero.avif");
   background-position: center;

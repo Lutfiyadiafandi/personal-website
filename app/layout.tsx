@@ -3,6 +3,7 @@ import { Plus_Jakarta_Sans } from "@next/font/google";
 import Navigation from "../common/components/layouts/Navigation";
 
 import "./globals.css";
+import ThemeProvider from "@/common/components/layouts/ThemeProvide";
 
 const plusJakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -21,9 +22,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${plusJakarta.variable} font-plusjakarta`}>
-        <Navigation />
-        {children}
+      <body
+        className={`${plusJakarta.variable} font-plusjakarta bg-day dark:bg-night`}
+      >
+        <ThemeProvider>
+          <Navigation />
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );

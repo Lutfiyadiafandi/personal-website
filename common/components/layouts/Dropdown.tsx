@@ -30,23 +30,30 @@ export default function Dropdown() {
   return (
     <div
       onClick={() => setIsOpen(!isOpen)}
-      className="relative w-full h-full px-[25px] py-[6px] bg-yellow-30 rounded-full cursor-pointer border border-white bg-[#ffffff26] group hover:bg-white duration-500 ease-in-out"
+      className="relative w-full h-full px-[25px] py-[6px] bg-yellow-30 rounded-full cursor-pointer border border-night group hover:bg-night duration-500 ease-in-out dark:border-day dark:hover:bg-day"
     >
       <div className="flex justify-between items-center">
-        <span className="text-white text-medium font-semibold group-hover:text-black  duration-500 ease-in-out">
+        <span className="text-night text-type-m font-semibold group-hover:text-day  duration-500 ease-in-out hidden md:block dark:text-day dark:group-hover:text-night">
           Navigation menu
         </span>
-        <ArrowIcons color="white" colorhover="black" />
+        <span className="text-night text-type-m font-semibold group-hover:text-day  duration-500 ease-in-out block md:hidden dark:text-day dark:group-hover:text-night">
+          Menu
+        </span>
+        <ArrowIcons
+          color="night"
+          colorhover="day"
+          darkmode="dark:text-day dark:group-hover:text-night"
+        />
       </div>
 
       {isOpen && (
-        <div className="absolute left-0 mt-[12px] w-full bg-white rounded-xl">
+        <div className="absolute left-0 mt-[12px] w-full bg-night rounded-xl dark:bg-day">
           {links.map((item) => (
             <Link href={item.path} key={item.name} passHref>
               <div
-                className={`relative bg-yellow-30 text-lg font-medium text-black cursor-pointer py-2 pl-[25px] rounded-xl hover:bg-amber-100 hover:text-amber-900 ${
+                className={`relative bg-yellow-30 text-type-m font-medium text-day cursor-pointer py-2 pl-[25px] rounded-xl hover:bg-amber-200 hover:text-amber-900 ${
                   router == item.path ? "font-semibold" : ""
-                }`}
+                } dark:text-day dark:group-hover:text-night`}
               >
                 {item.name}
               </div>

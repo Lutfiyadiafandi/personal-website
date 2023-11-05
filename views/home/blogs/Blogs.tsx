@@ -8,21 +8,31 @@ const Blogs = () => {
   return (
     <Link
       href={"/blogs"}
-      className="col-span-2 row-span-1 lg:col-span-1 lg:row-span-1 rounded-4xl bg-yellow-300 order-5 p-6 group flex flex-col justify-between"
+      className="group order-5 col-span-2 row-span-1 flex flex-col justify-between rounded-4xl bg-yellow-400 p-6 md:col-span-1 min-h-[210px]"
     >
-      <div className="flex justify-between items-center">
-        <Tag text="BLOGS" color="text-white" bgColor="bg-black" />
-        <ArrowIcons color="black" colorhover="black" />
+      <div className="flex items-center justify-between">
+        <Tag
+          text="BLOGS"
+          color="text-night dark:text-day"
+          bgColor="bg-day dark:bg-night"
+        />
+        <ArrowIcons
+          color="day"
+          colorhover="day"
+          darkmode="dark:text-night dark:group-hover:text-night"
+        />
       </div>
       <div>
-        <div className="flex justify-between items-center">
-          <h2 className="text-large2 font-bold text-black">
+        <div className="flex items-center justify-between">
+          <h2 className="text-type-l font-semibold text-day xl:text-type-xl dark:text-night">
             All Blogs Done Writing
           </h2>
-          <h1 className="text-headingnum font-medium text-black">12%</h1>
+          <h1 className="text-heading-num font-bold text-day dark:text-night">
+            12+
+          </h1>
         </div>
-        <Breakline className="border-t-[10px] rounded-4xl mt-[15px] border-black" />
-        <Breakline className="border-black mt-[3px]" />
+        <Breakline className="rounded-4xl border-t-[10px] border-day mt-[10px] dark:border-night" />
+        <Breakline className="mt-[3px] rounded-lg border-day dark:border-night" />
       </div>
     </Link>
   );
