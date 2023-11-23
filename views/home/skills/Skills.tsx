@@ -1,4 +1,3 @@
-import React from "react";
 import { SkillStacks } from "@/common/data/SkillStack";
 import MarqueeElement from "@/common/components/elements/MarqueeElement";
 import SkillCard from "./SkillCard";
@@ -8,18 +7,14 @@ import Breakline from "@/common/components/elements/Breakline";
 
 const Skills = () => {
   return (
-    <div className="group order-6 col-span-2 row-span-1 flex flex-col justify-between gap-5 rounded-4xl bg-emerald-400 p-6 lg:col-span-2">
+    <div className="group order-6 col-span-2 row-span-1 flex flex-col justify-between gap-5 rounded-4xl border-2 border-night p-6 lg:col-span-2 dark:border-day">
       <div className="flex items-center justify-between">
         <Tag
-          text="TECHSTACK"
-          color="text-night dark:text-day"
-          bgColor="bg-day dark:bg-night"
+          text="SKILLS"
+          color="text-day dark:text-night"
+          bgColor="bg-night dark:bg-day"
         />
-        <ArrowIcons
-          color="day"
-          colorhover="day"
-          darkmode="dark:text-night dark:group-hover:text-night"
-        />
+        <ArrowIcons color="night" darkmode="dark:text-day" />
       </div>
       <div>
         <MarqueeElement direction={"right"}>
@@ -35,12 +30,12 @@ const Skills = () => {
       </div>
       <div>
         <div className="flex items-end">
-          <h2 className="text-type-l font-semibold text-day xl:text-type-xl dark:text-night">
-            This is My Technologies used
+          <h2 className="text-type-l font-semibold text-night xl:text-type-xl dark:text-day">
+            Tech Proficiency: A Glimpse into My Skills.
           </h2>
         </div>
-        <Breakline className="mt-[5px] rounded-4xl border-t-[10px] border-day lg:mt-[10px] dark:border-night" />
-        <Breakline className="mt-[3px] rounded-lg border-day dark:border-night" />
+        <Breakline className="mt-[5px] rounded-4xl border-t-[10px] border-night lg:mt-[10px] dark:border-day" />
+        <Breakline className="mt-[3px] rounded-lg border-night dark:border-day" />
       </div>
     </div>
   );

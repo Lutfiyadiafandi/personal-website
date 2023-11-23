@@ -1,17 +1,45 @@
-import Clock from "@/common/components/elements/Clock";
+"use client";
+import Breakline from "@/common/components/elements/Breakline";
+import { riseWitFade } from "@/common/utils/framer/Animations";
+import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
+import moment from "moment";
+import Socmed from "@/common/components/elements/Socmed";
 
 const Dashboard = () => {
+  const [mantra, setMantra] = useState<any>();
+  const currentDate = moment().format("Do");
+  const id = currentDate.replace(/(\d+)(th|st|nd|rd)/, "$1");
+  const fetchData = async () => {
+    const res = await fetch(`http://localhost:3000/api/mantra?id=${id}`);
+    const data = await res.json();
+    setMantra(data.data);
+  };
+  useEffect(() => {
+    fetchData();
+  }, []);
+
   return (
-    <div className="order-1 col-span-2 row-span-1 rounded-4xl p-6 lg:order-2 lg:col-span-2">
-      <div className="flex h-full flex-col justify-between gap-5 pt-[50px]">
-        <div className="flex flex-col lg:gap-3">
-          <Clock />
-        </div>
-        <p className="text-center text-type-xl font-semibold text-night md:text-heading-s dark:text-day">
-          “Where your focus goes, your energy flows.”
-        </p>
+    <motion.div
+      initial="initial"
+      animate="animate"
+      className="order-1 col-span-2 row-span-1 rounded-4xl lg:order-2 lg:col-span-2 lg:p-6"
+    >
+      <div className="flex h-full flex-col justify-end gap-[60px] pt-[100px]">
+        <motion.div variants={riseWitFade}>
+          <p className="mb-2 text-center text-type-s font-medium text-secondary">
+            Today's Mantra
+          </p>
+          {mantra && (
+            <p className="text-center text-type-xl font-semibold text-night md:text-heading-s dark:text-day">
+              {`“${mantra?.mantra}”`}
+            </p>
+          )}
+          <Breakline className="my-1 rounded-lg border-night dark:border-day" />
+        </motion.div>
+        <Socmed />
       </div>
-    </div>
+    </motion.div>
   );
 };
 

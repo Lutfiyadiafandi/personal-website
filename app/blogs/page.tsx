@@ -1,10 +1,16 @@
-import React from "react";
+import Blogs from "@/views/blogs/Blogs";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: `Blogs | Lutfiyadi Afandi`,
+  description: `Personal Website, portfolio, blog`,
+};
 
 const BlogsPage = () => {
   return (
-    <div>
-      <h1>Blogs Page</h1>
-    </div>
+    <>
+      <Blogs />
+    </>
   );
 };
 export default BlogsPage;

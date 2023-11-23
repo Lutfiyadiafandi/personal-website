@@ -1,10 +1,16 @@
-import React from "react";
+import Projects from "@/views/projetcs/Projects";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: `Projects | Lutfiyadi Afandi`,
+  description: `Personal Website, portfolio, blog`,
+};
 
 const ProjectPage = () => {
   return (
-    <div>
-      <h1>Project Page</h1>
-    </div>
+    <>
+      <Projects />
+    </>
   );
 };
 export default ProjectPage;

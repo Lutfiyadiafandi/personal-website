@@ -1,21 +1,21 @@
-import React from "react";
 import Hero from "./hero/Hero";
 import Dashboard from "./dashboard/Dashboard";
 import Profile from "./profile/Profile";
-import Projects from "./project/Project";
-import Blogs from "./blogs/Blogs";
+import ProjectLink from "./project/ProjectLink";
+import BlogLink from "./blog/BlogLink";
 import Skills from "./skills/Skills";
+import PageWrapper from "@/common/components/layouts/PageWrapper";
 
 const Home = () => {
   return (
-    <main className="mx-auto grid max-w-screen-2xl auto-rows-min grid-cols-2 gap-[10px] px-2 py-2 lg:auto-rows-cards lg:grid-cols-4">
+    <PageWrapper className="pb-[60px] grid auto-rows-min grid-cols-2 gap-[10px] lg:auto-rows-cards lg:grid-cols-4">
       <Hero />
       <Dashboard />
       <Profile />
-      <Projects />
-      <Blogs />
+      <ProjectLink />
+      <BlogLink />
       <Skills />
-    </main>
+    </PageWrapper>
   );
 };
 

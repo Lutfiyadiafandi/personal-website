@@ -1,21 +1,39 @@
-import Image from "next/image";
-import Link from "next/link";
-import React from "react";
+import SocmedIcon from "./SocmedIcon";
+import {
+  FaFacebook,
+  FaGithub,
+  FaInstagram,
+  FaLinkedin,
+  FaWhatsapp,
+} from "react-icons/fa";
 
 type SocmedProps = {
-  image: any;
-  link: string;
+  className?: string;
 };
-const Socmed = ({ image, link }: SocmedProps) => {
+const Socmed = ({ className }: SocmedProps) => {
   return (
-    <Link
-      href={link}
-      passHref={true}
-      target="_blank"
-      className="w-[45px] h-[45px] border text-day border-gray-400 rounded-xl flex justify-center items-center hover:bg-primary-200 hover:text-day duration-500 ease-in-out transition-all dark:text-night dark:hover:text-night"
-    >
-      {image}
-    </Link>
+    <div className={`flex justify-center gap-5 pb-1 ${className}`}>
+      <SocmedIcon
+        icon={<FaLinkedin size={"100%"} />}
+        link="https://www.linkedin.com/in/lutfiyadiafandi/"
+      />
+      <SocmedIcon
+        icon={<FaInstagram size={"100%"} />}
+        link="https://www.instagram.com/lutfiyadiafandy/"
+      />
+      <SocmedIcon
+        icon={<FaWhatsapp size={"100%"} />}
+        link="https://api.whatsapp.com/send?phone=6287848722224"
+      />
+      <SocmedIcon
+        icon={<FaFacebook size={"100%"} />}
+        link="https://www.facebook.com/lutfi.afandy.71/"
+      />
+      <SocmedIcon
+        icon={<FaGithub size={"100%"} />}
+        link="https://github.com/lutfiyadiafandi"
+      />
+    </div>
   );
 };
 
