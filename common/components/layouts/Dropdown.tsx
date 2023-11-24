@@ -5,7 +5,7 @@ import ArrowIcons from "@/common/components/elements/ArrowIcons";
 import { usePathname } from "next/navigation";
 import { stagger } from "framer-motion";
 import useMenuAnimation from "@/hooks/useMenuAnimation";
-import { Links } from "@/common/data/Links";
+import Nav from "@/common/data/Nav.json";
 
 export default function Dropdown() {
   const staggerMenuItems = stagger(0.1, { startDelay: 0.15 });
@@ -43,7 +43,7 @@ export default function Dropdown() {
           clipPath: "inset(10% 50% 90% 50% round 10px)",
         }}
       >
-        {Links.map((item) => (
+        {Nav.map((item) => (
           <Link href={item.path} key={item.name} passHref>
             <li
               className={`px-4 py-3 text-type-m cursor-pointer rounded-xl hover:bg-amber-200 hover:text-amber-900 ${

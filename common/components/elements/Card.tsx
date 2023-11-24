@@ -3,13 +3,9 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { ReactNode, useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
+import { IProjects } from "@/common/interface/IProjects";
 
-type CardProps = {
-  title: string;
-  image: string;
-  tech: ReactNode;
-};
-const Card = ({ title, image, tech }: CardProps) => {
+const Card = ({ title, image, link, tech }: IProjects) => {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -24,7 +20,13 @@ const Card = ({ title, image, tech }: CardProps) => {
     >
       <div className="colspan-1 bg-sec-day rounded-3xl p-4 dark:bg-sec-night">
         <div className="w-full h-[250px] rounded-lg cursor-pointer group overflow-hidden">
-          <Link href={"/"} className="w-full h-full">
+          <Link
+            href={link}
+            passHref={true}
+            rel="noopener noreferrer"
+            target="_blank"
+            className="w-full h-full"
+          >
             <Image
               style={{ width: "100%", height: "100%" }}
               src={image}
@@ -33,7 +35,7 @@ const Card = ({ title, image, tech }: CardProps) => {
               height={0}
               priority
               sizes={"100vw"}
-              className="object-cover rounded-lg transform transition-transform duration-500 ease-in-out group-hover:scale-105"
+              className="object-cover aspect-video rounded-lg transform transition-transform duration-500 ease-in-out group-hover:scale-105"
             />
           </Link>
         </div>

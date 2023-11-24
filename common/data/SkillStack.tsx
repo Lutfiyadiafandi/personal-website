@@ -2,6 +2,7 @@ import {
   SiExpress,
   SiNestjs,
   SiReact,
+  SiStrapi,
   SiTailwindcss,
   SiTypescript,
 } from "react-icons/si";
@@ -54,6 +55,10 @@ export const SkillStacks: SkillStacksProps[] = [
   {
     name: "Bootstrap",
     icon: <FaBootstrap size={iconSize} className="text-purple-500" />,
+  },
+  {
+    name: "Strapi",
+    icon: <SiStrapi size={iconSize} className="text-blue-500" />,
   },
   {
     name: "Express JS",
