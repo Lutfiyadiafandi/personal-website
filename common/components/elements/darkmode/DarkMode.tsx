@@ -6,8 +6,9 @@ const DarkMode = () => {
   const [check, setCheck] = useState(false);
 
   const handleChange = () => {
-    document.documentElement.classList.toggle("dark");
-    setCheck(!check);
+    const newCheckValue = !check;
+    document.documentElement.classList.toggle("dark", newCheckValue);
+    setCheck(newCheckValue);
   };
   return (
     <label className="theme-switch">
