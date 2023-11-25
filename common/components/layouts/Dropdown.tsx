@@ -45,15 +45,17 @@ export default function Dropdown() {
       >
         {Nav.map((item) => (
           <Link href={item.path} key={item.name} passHref>
-            <li
-              className={`px-4 py-3 text-type-m cursor-pointer rounded-xl hover:bg-amber-200 hover:text-amber-900 ${
-                router === item.path
-                  ? "text-amber-200 dark:text-amber-600 font-bold"
-                  : "text-day dark:text-night font-medium"
-              }`}
-            >
-              {item.name}
-            </li>
+            <a>
+              <li
+                className={`px-4 py-3 text-type-m cursor-pointer rounded-xl hover:bg-amber-200 hover:text-amber-900 ${
+                  router === item.path
+                    ? "text-amber-200 dark:text-amber-600 font-bold"
+                    : "text-day dark:text-night font-medium"
+                }`}
+              >
+                {item.name}
+              </li>
+            </a>
           </Link>
         ))}
       </ul>
