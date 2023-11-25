@@ -8,19 +8,19 @@ import Socmed from "@/common/components/elements/Socmed";
 
 const Dashboard = () => {
   const [mantra, setMantra] = useState<any>();
+  let currentDate = moment().format("Do");
+  const date = currentDate.replace(/(\d+)(th|st|nd|rd)/, "$1");
 
-  const fetchData = async ({ id }: any) => {
+  const fetchData = async () => {
     const res = await fetch(
-      `${process.env.NEXT_PUBLIC_DOMAIN}/api/mantra?id=${id}`
+      `${process.env.NEXT_PUBLIC_DOMAIN}/api/mantra?id=${date}`
     );
     const data = await res.json();
     setMantra(data.data);
   };
   useEffect(() => {
-    const currentDate = moment().format("Do");
-    const date = currentDate.replace(/(\d+)(th|st|nd|rd)/, "$1");
-    fetchData(date);
-  }, []);
+    fetchData();
+  }, [date]);
 
   return (
     <motion.div

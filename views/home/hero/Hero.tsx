@@ -10,11 +10,13 @@ const Hero = () => {
         }}
         src={"/hero.png"}
         alt="Hero Image"
+        width={0}
+        height={0}
         priority
         fill
         sizes="(100vw)"
         placeholder="blur"
-        blurDataURL="/hero.avif"
+        blurDataURL="/hero.png"
         className="rounded-4xl"
       />
     </div>
