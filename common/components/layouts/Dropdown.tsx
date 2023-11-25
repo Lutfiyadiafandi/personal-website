@@ -8,6 +8,25 @@ import useMenuAnimation from "@/hooks/useMenuAnimation";
 import Nav from "@/common/data/Nav.json";
 
 export default function Dropdown() {
+  const links = [
+    {
+      name: "Home",
+      path: "/",
+    },
+    {
+      name: "Projects",
+      path: "/projects",
+    },
+    {
+      name: "Blogs",
+      path: "/blogs",
+    },
+    {
+      name: "Contact",
+      path: "/contact",
+    },
+  ];
+
   const staggerMenuItems = stagger(0.1, { startDelay: 0.15 });
   const router = usePathname();
   const [isOpen, setIsOpen] = useState(false);
@@ -43,19 +62,17 @@ export default function Dropdown() {
           clipPath: "inset(10% 50% 90% 50% round 10px)",
         }}
       >
-        {Nav.map((item) => (
+        {links.map((item) => (
           <Link href={item.path} key={item.name} passHref>
-            <a>
-              <li
-                className={`px-4 py-3 text-type-m cursor-pointer rounded-xl hover:bg-amber-200 hover:text-amber-900 ${
-                  router === item.path
-                    ? "text-amber-200 dark:text-amber-600 font-bold"
-                    : "text-day dark:text-night font-medium"
-                }`}
-              >
-                {item.name}
-              </li>
-            </a>
+            <li
+              className={`px-4 py-3 text-type-m cursor-pointer rounded-xl hover:bg-amber-200 hover:text-amber-900 ${
+                router === item.path
+                  ? "text-amber-200 dark:text-amber-600 font-bold"
+                  : "text-day dark:text-night font-medium"
+              }`}
+            >
+              {item.name}
+            </li>
           </Link>
         ))}
       </ul>

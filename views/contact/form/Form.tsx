@@ -41,7 +41,7 @@ const Form = () => {
         />
 
         <InputField
-          label={"No / Email"}
+          label={"Email"}
           type={"email"}
           name={"email"}
           value={formik.values.email}
