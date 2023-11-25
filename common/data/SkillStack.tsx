@@ -46,7 +46,9 @@ export const SkillStacks: SkillStacksProps[] = [
   },
   {
     name: "Next JS",
-    icon: <TbBrandNextjs size={iconSize} />,
+    icon: (
+      <TbBrandNextjs size={iconSize} className="text-black dark:text-white" />
+    ),
   },
   {
     name: "Tailwind CSS",
@@ -62,7 +64,7 @@ export const SkillStacks: SkillStacksProps[] = [
   },
   {
     name: "Express JS",
-    icon: <SiExpress size={iconSize} />,
+    icon: <SiExpress size={iconSize} className="text-black dark:text-white" />,
   },
   {
     name: "Nest JS",
@@ -74,7 +76,7 @@ export const SkillStacks: SkillStacksProps[] = [
   },
   {
     name: "GitHub",
-    icon: <FaGithub size={iconSize} />,
+    icon: <FaGithub size={iconSize} className="text-black dark:text-white" />,
   },
 ];
 {

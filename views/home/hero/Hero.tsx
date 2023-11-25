@@ -8,7 +8,7 @@ const Hero = () => {
         style={{
           objectFit: "cover",
         }}
-        src={"/hero.avif"}
+        src={"/hero.png"}
         alt="Hero Image"
         priority
         fill
