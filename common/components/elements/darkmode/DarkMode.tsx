@@ -1,10 +1,18 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./DarkMode.css";
 
 const DarkMode = () => {
   const [check, setCheck] = useState(false);
-
+  useEffect(() => {
+    const storedDarkMode = localStorage.getItem("darkMode");
+    const prefersDarkMode = window.matchMedia(
+      "(prefers-color-scheme: dark)"
+    ).matches;
+    setCheck(
+      storedDarkMode === "true" || (storedDarkMode === null && prefersDarkMode)
+    );
+  }, []);
   const handleChange = () => {
     const newCheckValue = !check;
     document.documentElement.classList.toggle("dark", newCheckValue);
