@@ -1,34 +1,12 @@
 "use client";
 import { useState } from "react";
-import Link from "next/link";
 import ArrowIcons from "@/common/components/elements/ArrowIcons";
-import { usePathname } from "next/navigation";
 import { stagger } from "framer-motion";
 import useMenuAnimation from "@/hooks/useMenuAnimation";
-import Nav from "@/common/data/Nav.json";
+import Menu from "../elements/Menu";
 
 export default function Dropdown() {
-  const links = [
-    {
-      name: "Home",
-      path: "/",
-    },
-    {
-      name: "Projects",
-      path: "/projects",
-    },
-    {
-      name: "Blogs",
-      path: "/blogs",
-    },
-    {
-      name: "Contact",
-      path: "/contact",
-    },
-  ];
-
   const staggerMenuItems = stagger(0.1, { startDelay: 0.15 });
-  const router = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const scope = useMenuAnimation({
     isOpen,
@@ -55,27 +33,7 @@ export default function Dropdown() {
           rotate={false}
         />
       </div>
-
-      <ul
-        className="mt-[12px] w-full flex flex-col bg-night rounded-xl dark:bg-day"
-        style={{
-          clipPath: "inset(10% 50% 90% 50% round 10px)",
-        }}
-      >
-        {links.map((item) => (
-          <Link href={item.path} key={item.name} passHref>
-            <li
-              className={`px-4 py-3 text-type-m cursor-pointer rounded-xl hover:bg-amber-200 hover:text-amber-900 ${
-                router === item.path
-                  ? "text-amber-200 dark:text-amber-600 font-bold"
-                  : "text-day dark:text-night font-medium"
-              }`}
-            >
-              {item.name}
-            </li>
-          </Link>
-        ))}
-      </ul>
+      <Menu />
     </div>
   );
 }
