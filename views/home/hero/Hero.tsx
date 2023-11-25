@@ -8,7 +8,7 @@ const Hero = () => {
         style={{
           objectFit: "cover",
         }}
-        src={"/hero.png"}
+        src={"/disney.jpeg"}
         alt="Hero Image"
         width={0}
         height={0}
@@ -16,7 +16,7 @@ const Hero = () => {
         fill
         sizes="(100vw)"
         placeholder="blur"
-        blurDataURL="/hero.png"
+        blurDataURL="/disney.jpeg"
         className="rounded-4xl"
       />
     </div>

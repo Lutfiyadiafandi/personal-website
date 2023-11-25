@@ -17,7 +17,7 @@ const Contact = () => {
             style={{
               objectFit: "cover",
             }}
-            src={"/hero.png"}
+            src={"/projects/hero.png"}
             alt="Hero Image"
             priority
             width={0}
@@ -25,7 +25,7 @@ const Contact = () => {
             fill
             sizes="(100vw)"
             placeholder="blur"
-            blurDataURL="/hero.png"
+            blurDataURL="/projects/hero.png"
             className="rounded-4xl"
           />
         </div>
