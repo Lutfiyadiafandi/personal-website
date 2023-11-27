@@ -19,7 +19,7 @@ const Card = ({ title, image, link, tech }: IProjects) => {
       style={{ scale: scaleProgress, opacity: opacityProgress }}
     >
       <div className="colspan-1 bg-sec-day rounded-3xl p-4 dark:bg-sec-night">
-        <div className="w-full h-[250px] rounded-lg cursor-pointer group overflow-hidden">
+        <div className="w-full h-[280px] rounded-lg cursor-pointer group overflow-hidden">
           <Link
             href={link}
             passHref={true}
@@ -35,7 +35,7 @@ const Card = ({ title, image, link, tech }: IProjects) => {
               height={0}
               priority
               sizes={"100vw"}
-              className="object-cover aspect-video rounded-lg transform transition-transform duration-500 ease-in-out group-hover:scale-105"
+              className="object-cover rounded-lg transform transition-transform duration-500 ease-in-out group-hover:scale-105"
             />
           </Link>
         </div>

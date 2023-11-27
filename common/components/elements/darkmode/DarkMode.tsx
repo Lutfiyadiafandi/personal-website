@@ -1,21 +1,17 @@
 "use client";
-import React, { useState } from "react";
+
 import "./DarkMode.css";
+import { useDarkMode } from "@/common/utils/darkmode/DarkModeContext";
 
 const DarkMode = () => {
-  const [check, setCheck] = useState(false);
-
-  const handleChange = () => {
-    document.documentElement.classList.toggle("dark");
-    setCheck(!check);
-  };
+  const { darkMode, toggleDarkMode } = useDarkMode();
   return (
     <label className="theme-switch">
       <input
         type="checkbox"
         className="theme-switch__checkbox"
-        checked={check}
-        onChange={handleChange}
+        checked={darkMode}
+        onChange={toggleDarkMode}
       />
       <div className="theme-switch__container">
         <div className="theme-switch__clouds"></div>

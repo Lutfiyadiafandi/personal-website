@@ -3,6 +3,7 @@ import Navigation from "../common/components/layouts/Navigation";
 import Footer from "@/common/components/layouts/Footer";
 import { plusJakarta } from "@/common/utils/fonts/Font";
 import "./globals.css";
+import { DarkModeProvider } from "@/common/utils/darkmode/DarkModeContext";
 
 export default function RootLayout({
   children,
@@ -14,9 +15,11 @@ export default function RootLayout({
       <body
         className={`${plusJakarta.variable} font-plusjakarta bg-day dark:bg-night`}
       >
-        <Navigation />
-        {children}
-        <Footer />
+        <DarkModeProvider>
+          <Navigation />
+          {children}
+          <Footer />
+        </DarkModeProvider>
       </body>
     </html>
   );

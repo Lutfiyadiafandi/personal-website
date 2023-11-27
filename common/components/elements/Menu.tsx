@@ -1,5 +1,6 @@
 import Nav from "@/common/data/Nav.json";
 import Link from "next/link";
+
 import { usePathname } from "next/navigation";
 
 const Menu = () => {

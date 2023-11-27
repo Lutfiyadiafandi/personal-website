@@ -11,6 +11,20 @@ import { FaCss3Alt, FaJs } from "react-icons/fa";
 const size = 25;
 export const ProjectsData: IProjects[] = [
   {
+    title: "Lutfiyadi Afandi Personal Website",
+    image: "/projects/lutfiyadiafandi.png",
+    link: "/projects",
+    tech: (
+      <>
+        <SiReact size={size} className="text-sky-500" />
+        <SiTypescript size={size} className="text-blue-400" />
+        <SiTailwindcss size={size} className="text-cyan-300" />
+        <SiStrapi size={size} className="text-blue-500" />
+        <SiNestjs size={size} className="text-rose-500" />
+      </>
+    ),
+  },
+  {
     title: "Lentera Visi Edutama",
     image: "/projects/lenteravisiedutama.png",
     link: "https://lenteravisiedutama.com/",

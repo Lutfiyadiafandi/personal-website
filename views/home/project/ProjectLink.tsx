@@ -22,7 +22,7 @@ const ProjectLink = () => {
       </div>
       <div className="absolute inset-0 -top-10 flex items-center justify-center">
         <div className="text-heading-num font-bold text-day opacity-40 flex items-center">
-          4<span className="text-[70px]">+</span>
+          5<span className="text-[70px]">+</span>
         </div>
       </div>
     </Link>

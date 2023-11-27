@@ -8,7 +8,7 @@ const Hero = () => {
         style={{
           objectFit: "cover",
         }}
-        src={"/disney.jpeg"}
+        src={"/hero.png"}
         alt="Hero Image"
         width={0}
         height={0}
