@@ -15,7 +15,8 @@ export const DarkModeProvider = ({
 }: {
   children: React.ReactNode;
 }) => {
-  const storedDarkMode = localStorage.getItem("darkMode");
+  const isBrowser = typeof window !== "undefined";
+  const storedDarkMode = isBrowser ? localStorage.getItem("darkMode") : null;
   const [darkMode, setDarkMode] = useState<boolean>(
     storedDarkMode ? JSON.parse(storedDarkMode) : false
   );
