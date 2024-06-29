@@ -22,14 +22,6 @@ const Socmed = ({ className }: SocmedProps) => {
         link="https://www.instagram.com/lutfiyadiafandy/"
       />
       <SocmedIcon
-        icon={<FaWhatsapp size={"100%"} />}
-        link="https://api.whatsapp.com/send?phone=6287848722224"
-      />
-      <SocmedIcon
-        icon={<FaFacebook size={"100%"} />}
-        link="https://www.facebook.com/lutfi.afandy.71/"
-      />
-      <SocmedIcon
         icon={<FaGithub size={"100%"} />}
         link="https://github.com/lutfiyadiafandi"
       />

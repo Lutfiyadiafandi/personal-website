@@ -1,4 +1,5 @@
 import {
+  SiMysql,
   SiNestjs,
   SiReact,
   SiStrapi,
@@ -6,7 +7,7 @@ import {
   SiTypescript,
 } from "react-icons/si";
 import { IProjects } from "../interface/IProjects";
-import { FaCss3Alt, FaJs } from "react-icons/fa";
+import { FaJs } from "react-icons/fa";
 import { TbBrandNextjs } from "react-icons/tb";
 
 const size = 25;
@@ -25,7 +26,7 @@ export const ProjectsData: IProjects[] = [
   },
   {
     title: "Lentera Visi Edutama",
-    image: "/projects/lenteravisiedutama.png",
+    image: "/projects/LenteraVisiEdutama.png",
     link: "https://lenteravisiedutama.com",
     tech: (
       <>
@@ -34,12 +35,37 @@ export const ProjectsData: IProjects[] = [
         <SiTailwindcss size={size} className="text-cyan-300" />
         <SiStrapi size={size} className="text-blue-500" />
         <SiNestjs size={size} className="text-rose-500" />
+        <SiMysql size={size} className="text-sky-600" />
+      </>
+    ),
+  },
+  {
+    title: "Al Nasr",
+    image: "/projects/AlNasr.png",
+    link: "https://la-alnasr.netlify.app",
+    tech: (
+      <>
+        <SiReact size={size} className="text-sky-500" />
+        <SiTypescript size={size} className="text-blue-400" />
+        <SiTailwindcss size={size} className="text-cyan-300" />
+      </>
+    ),
+  },
+  {
+    title: "Skilline",
+    image: "/projects/Skilline.png",
+    link: "https://la-skilline.netlify.app",
+    tech: (
+      <>
+        <SiReact size={size} className="text-sky-500" />
+        <SiTypescript size={size} className="text-blue-400" />
+        <SiTailwindcss size={size} className="text-cyan-300" />
       </>
     ),
   },
   {
     title: "Staycation.",
-    image: "/projects/staycation.png",
+    image: "/projects/Staycation.png",
     link: "https://la-staycation.netlify.app",
     tech: (
       <>
@@ -51,25 +77,13 @@ export const ProjectsData: IProjects[] = [
   },
   {
     title: "Portofolio V1",
-    image: "/projects/portofoliov1.png",
+    image: "/projects/PortofolioV1.png",
     link: "https://lutfiyadiafandi.netlify.app",
     tech: (
       <>
         <SiReact size={size} className="text-sky-500" />
         <FaJs size={size} className="text-yellow-400" />
         <SiTailwindcss size={size} className="text-cyan-300" />
-      </>
-    ),
-  },
-  {
-    title: "Todo List App",
-    image: "/projects/todolist.png",
-    link: "https://apptodo-list.netlify.app",
-    tech: (
-      <>
-        <SiReact size={size} className="text-sky-500" />
-        <FaJs size={size} className="text-yellow-400" />
-        <FaCss3Alt size={size} className="text-blue-500" />
       </>
     ),
   },

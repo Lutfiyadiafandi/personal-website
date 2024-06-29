@@ -9,7 +9,7 @@ const Card = ({ title, image, link, tech }: IProjects) => {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["0 1", "1.33 1"],
+    offset: ["0 1", "1.15 1"],
   });
   const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
   const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
@@ -19,7 +19,7 @@ const Card = ({ title, image, link, tech }: IProjects) => {
       style={{ scale: scaleProgress, opacity: opacityProgress }}
     >
       <div className="colspan-1 bg-sec-day rounded-3xl p-4 dark:bg-sec-night">
-        <div className="w-full h-[280px] rounded-lg cursor-pointer group overflow-hidden">
+        <div className="w-full aspect-[4/3] rounded-lg cursor-pointer group overflow-hidden">
           <Link
             href={link}
             passHref={true}
@@ -40,7 +40,7 @@ const Card = ({ title, image, link, tech }: IProjects) => {
           </Link>
         </div>
         <div className="px-[10px] mt-3">
-          <h2 className="text-type-l font-semibold text-night mb-3 dark:text-day">
+          <h2 className="mb-3 text-type-l font-semibold text-night dark:text-day">
             {title}
           </h2>
           <div className="flex justify-end gap-3">{tech}</div>
