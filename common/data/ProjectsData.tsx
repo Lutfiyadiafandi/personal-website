@@ -40,6 +40,18 @@ export const ProjectsData: IProjects[] = [
     ),
   },
   {
+    title: "Pod of Cast",
+    image: "/projects/PodofCast.png",
+    link: "https://la-podofcast.netlify.app",
+    tech: (
+      <>
+        <SiReact size={size} className="text-sky-500" />
+        <SiTypescript size={size} className="text-blue-400" />
+        <SiTailwindcss size={size} className="text-cyan-300" />
+      </>
+    ),
+  },
+  {
     title: "Al Nasr",
     image: "/projects/AlNasr.png",
     link: "https://la-alnasr.netlify.app",
